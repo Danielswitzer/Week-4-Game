@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rare Crystal game: Key To Life</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  
+  <style type="text/css">
+    .crystalImage {
+      width: 300px;
+      height: 300px;
+    }
+  </style>
+
+</head>
+<body>
+
+  <h1>Chosen Number: <span id="ChosenNumber"></span></h1>
+		
+
+  <div id="crystals">
+
+	<div class="container">
+		<div clasa= "row">
+			<div class= "col-lg-2">
+
+			<div class= "crystalImage">
+			</div>
+
+			</div>
+				<div class= "col-lg-1">
+				</div>
+			<div class= "col-lg-2">
+
+		<div class= "crystalImage">
+		</div>
+
+			</div>
+
+			</div>
+				<div class= "col-lg-1">
+				</div>
+			<div class= "col-lg-2">
+
+		<div class= "crystalImage">
+			</div>
+
+			</div>
+				<div class= "col-lg-1">
+				</div>
+			<div class= "col-lg-2">
+
+			<div class= "crystalImage">
+			</div>
+
+			</div>
+				<div class= "col-lg-1">
+				</div>
+
+
+	</div>
+		</div>
+
+
+  </div>
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+
+ 	<script type="text/javascript">
+ 		
+			var chosenNumber: 77;
+			$("chosenNumber").text(chosenNumber);
+			var counter: 0;
+
+			var crystalValues: [7, 10, 11, 1];
+
+			for (var i = 0; i < crystalValues.length; i++) {
+
+				var crystalImage= $(<img>);
+
+				crystalImage.addClass("crystalImage");
+
+				crystalImage.attr(src,"alexandrite.jpg")
+
+				imageCrystal.attr("data-crystalvalue", crystalValues[i]);
+
+				$("#crystals").append(imageCrystal);
+
+				$(".crystalImage").on("click", function () {
+
+					var crystalValue=($(this).data("crystalvalue"));
+
+					  counter += crystalValue;
+    // All of the same game win-lose logic applies. So the rest remains unchanged.
+    				alert("New score: " + counter);
+   					 if (counter === targetNumber) {
+      				alert("You have reached the chosen number and therefore have unlocked the keys to all life");
+    }
+    else if (counter >= targetNumber) {
+      alert("You are still searching for the keys");
+    }
+  });
+
+
+
+
+				})
+
+
+
+
+
+
+ 	</script>
+
+ 	Var 
